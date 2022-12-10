@@ -25,7 +25,7 @@ namespace QuanLySach.Areas.Admin.Controllers
         public ActionResult Login(string TenDangNhap, string MatKhau)
         {
             MaHoa mh = new MaHoa();
-            string mk = mh.GetMD5_low(MatKhau);
+            string mk = MatKhau;
             NguoiDung nd = db.NguoiDungs.Where(x => x.TenDangNhap == TenDangNhap && x.MatKhau == mk).FirstOrDefault();
             if (nd != null)
             {

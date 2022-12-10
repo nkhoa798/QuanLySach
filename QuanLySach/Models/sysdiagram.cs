@@ -12,17 +12,12 @@ namespace QuanLySach.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TinTuc
+    public partial class sysdiagram
     {
-        public int Ma { get; set; }
-        public string TieuDe { get; set; }
-        public string MoTaNgan { get; set; }
-        public string MoTa { get; set; }
-        public string Anh { get; set; }
-        public int MaCM { get; set; }
-        public Nullable<System.DateTime> NgayDang { get; set; }
-        public string TacGia { get; set; }
-    
-        public virtual ChuyenMuc ChuyenMuc { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

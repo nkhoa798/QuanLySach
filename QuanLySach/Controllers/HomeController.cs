@@ -28,7 +28,6 @@ namespace QuanLySach.Controllers
         {
 
             var theloai = db.LoaiSPs.ToList();
-            ViewBag.ChuyenMuc = db.ChuyenMucs.ToList();
 
             return PartialView(theloai);
         }
@@ -60,11 +59,7 @@ namespace QuanLySach.Controllers
 
             return PartialView(newProduct);
         }
-        public PartialViewResult Blog()
-        {
-            var blog = db.TinTucs.OrderByDescending(x => x.Ma).Take(3).ToList();
-            return PartialView(blog);
-        }
+       
         public PartialViewResult BestSell()
         {
             var newProduct = db.SanPhams.OrderByDescending(x => x.NamXB).Take(20).ToList();
