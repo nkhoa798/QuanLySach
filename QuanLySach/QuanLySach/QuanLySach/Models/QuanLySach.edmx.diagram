@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d8a53731307043409f7458b6d46cf705" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLySachModel.CauHinh" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySachModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySachModel.ChuyenMuc" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySachModel.KhachHang" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySachModel.LoaiSP" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySachModel.NguoiDung" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySachModel.sysdiagram" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLySachModel.DonHang" Width="1.5" PointX="3" PointY="4.875" />
+        <AssociationConnector Association="QuanLySachModel.FK_ChiTietDonHang_DonHang" />
+        <AssociationConnector Association="QuanLySachModel.FK_DonHang_KhachHang" />
+        <EntityTypeShape EntityType="QuanLySachModel.TinTuc" Width="1.5" PointX="8" PointY="4.75" />
+        <AssociationConnector Association="QuanLySachModel.FK_TinTuc_ChuyenMuc" />
+        <EntityTypeShape EntityType="QuanLySachModel.SanPham" Width="1.5" PointX="3" PointY="8.875" />
+        <AssociationConnector Association="QuanLySachModel.FK_ChiTietDonHang_SanPham" />
+        <AssociationConnector Association="QuanLySachModel.FK_SanPham_LoaiSP" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
