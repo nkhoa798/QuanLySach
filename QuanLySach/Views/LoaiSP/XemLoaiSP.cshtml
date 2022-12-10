@@ -52,8 +52,10 @@
                                             <div class="price--output">
                                                 <span>Giá :</span> <input type="text" id="input_range" value="250000" disabled />VND
                                             </div>
-                                            <div class="price--filter">
-                                                <a style="color:white" onclick="document.getElementById('range_item').submit()">Lọc</a>
+                                            <div>
+                                                <a style="color:white" onclick="document.getElementById('range_item').submit()">
+                                                <input class="btn btn-block btn-dark" type="button" value="Lọc" />
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -83,15 +85,15 @@
                             </div>
                             <p>Showing 1–12 of 40 results</p>
                             <div class="orderby__wrapper">
-                                <form id="timkiemloai" method="get" action="@Url.Action("XemLoaiSP","LoaiSP")">
+                                <form id="timkiemloai" method="get" action="@Url.Action("SapXepSanPham","LoaiSP")">
                                     <span>Sort By</span>
                                     <select class="shot__byselect" name="ma" onchange="document.getElementById('timkiemloai').submit()">
                                         <option value="">--Chon--</option>
-                                        @foreach (var item in ViewBag.LoaiSP)
-                                        {
+                                        <option value="1">A-Z</option>
+                                        <option value="2">Z-A</option>
+                                        <option value="3">Thấp-Cao</option>
+                                        <option value="4">Cao-Thấp</option>
 
-                                            <option value="@item.Ma">@item.Ten</option>
-                                        }
                                     </select>
                                 </form>
                             </div>
@@ -109,7 +111,7 @@
                                         <a class="first__img" href="@Url.Action("SingleProduct","SinglePage" , new { ma = item.Ma })"><img src="@item.Anh" alt="product image"></a>
                                         <a class="second__img animation1" href="@Url.Action("SingleProduct","SinglePage" , new { ma = item.Ma })"><img src="@item.Anh" alt="product image"></a>
                                         <div class="hot__box">
-                                            <span class="hot-label">@item.GiamGia</span>
+                                            <span class="hot-label">@item.GiamGia %</span>
                                         </div>
                                     </div>
                                     <div class="product__content content--center">

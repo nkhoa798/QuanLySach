@@ -63,8 +63,12 @@
                                         <a class="tocart btn" href="@Url.Action("ThemGioHang","GioHangs" , new { masp = ViewBag.sanpham.Ma , sl = 1})" title="Add to Cart">Add to Cart</a>
                                     </div>
                                     <div class="product-addto-links clearfix">
-                                        <a class="wishlist" href="@Url.Action("ThemWishList","wishlist" , new { masp = ViewBag.sanpham.Ma})"></a>
-                                        <a class="compare" href="@Url.Action("ThemGioHang","GioHangs" , new { masp = ViewBag.sanpham.Ma , sl = 1})"></a>
+                                        <ul class="add_to_links">
+                                            <li>
+                                                <a class="wishlist" href="@Url.Action("ThemWishList","wishlist" , new { masp = ViewBag.sanpham.Ma})"></a>
+                                            </li>
+                                        </ul>
+                                            
                                     </div>
                                 </div>
                                 <div class="product_meta">

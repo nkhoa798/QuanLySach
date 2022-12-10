@@ -67,7 +67,6 @@ namespace QuanLySach.Controllers
         }
         public ActionResult XoaSP(int masp)
         {
-
             var gh = (List<wishlist>)Session[wl];
             var sp = db.SanPhams.Find(masp);
             if (gh.Exists(x => x.sp.Ma == masp))
